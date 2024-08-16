@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <?!= includeMyScriptFile("css__style") ?>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div id="outerContainer">
+      <div id="innerContainer">
+
+        <!-- __________/  TITLE AREA  -->   
+        <div id="titleAreaContainer">
+          <div id="titleTextArea">
+            <span id = "titleShowcaseWord">Showcase ~&nbsp;</span>
+            <?!= showcaseSpecificText("showcaseTitleText") ?>
+          </div>
+          <?!= memberCanModerateCheck() ?>
+          <div id="titleIconArea">
+            <?!= showcaseSpecificText("showcaseOnionTag") ?>
+          </div>
+        </div>
+    
+        <!-- __________/  BODY AREA  -->   
+        <div id="bodyAreaContainer">
+        
+          <div id="videoContainer">
+            <?!= showcaseSpecificText("videoIframe") ?>
+          </div>
+          <div id="modAreaContainer">
+          </div>
+        
+          <div id="userInterfaceAreaContainer">
+            <input id="addYourVideoToggle" type="checkbox">
+            <label id="addYourVideoButton" for="addYourVideoToggle">
+              ◥◣&nbsp;&nbsp;
+              <?!= showcaseSpecificText("mainButtonText") ?>
+              ⤴◢◤</label>
+            <div id="clickedAddYourVideoArea">
+              <?!= showFormIfLoggedIn() ?>  
+            </div>
+          </div>
+        
+          <div id="userInterfaceAreaContainerMessage">
+          </div> 
+        </div>
+ 
+      </div>
+    </div>
+    
+    <!-- __________/  LOAD JAVASCRIPT  -->   
+    <?!= includeMyScriptFile("js__javascript") ?>  
+  </body>
+</html>
+
